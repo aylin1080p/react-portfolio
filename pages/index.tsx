@@ -1,5 +1,16 @@
 import Head from "next/head";
 
+//icons
+import { BsFillMoonStarsFill } from "react-icons/bs";
+import { BsInstagram, BsYoutube } from "react-icons/bs";
+import { SiEtsy } from "react-icons/si";
+
+//images
+import Image from "next/image";
+import fnd from "../public/fnd-profilepicture.png";
+import palette from "../public/Paint-Palette-Art-PNG-Images.png";
+import design1 from "../public/000.png";
+
 export default function Home() {
   return (
     <div>
@@ -9,9 +20,68 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <section className=" bg-blue-700 min-h-screen">
-          <h1>hello deneme</h1>
+      <main className="bg-white px-10 ">
+        <section>
+          <nav className="py-10 mb-12 flex justify-between">
+            <h1 className="text-xl font-burtons">Fnd Art</h1>
+            <ul className="flex items-center">
+              <li>
+                <BsFillMoonStarsFill className="cursor-pointer text-2xl" />
+              </li>
+
+              <li>
+                <a
+                  className=" bg-gradient-to-r  from-cyan-500 to-teal-500 text-wh,te px-4 py-2 rounded-md ml-8"
+                  href="#"
+                >
+                  Resume
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div className="text-center p-10 ">
+            <h2 className="text-5xl py-2 text-teal-600 font-medium">
+              Efendi Güneş
+            </h2>
+            <h3 className="text-2xl py-2">Photographer & Artist</h3>
+            <p className="text-md py-5 leading-8 text-gray-800">
+              A photographer, charcoal and oil painting artist with over 35
+              years of experience, let's get cracking
+            </p>
+          </div>
+          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+            <BsInstagram></BsInstagram>
+            <BsYoutube></BsYoutube>
+            <SiEtsy></SiEtsy>
+          </div>
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <Image src={fnd} layout="fill" objectFit="cover" />
+          </div>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl py-1">Services I Offer</h3>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusantium eum facere,{" "}
+              <span className="text-teal-500"> Renkli kelime</span>culpa eius
+              sapiente quod. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Molestias libero tenetur velit rem laudantium odio!
+            </p>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Accusantium eum facere,{" "}
+              <span className="text-teal-500"> Renkli kelime</span>culpa eius
+              sapiente quod. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Molestias libero tenetur velit rem laudantium odio!
+            </p>
+          </div>
+
+          <div>
+            <div>
+              <Image src />
+            </div>
+          </div>
         </section>
       </main>
     </div>
